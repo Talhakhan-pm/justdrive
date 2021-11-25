@@ -1,0 +1,33 @@
+<h1>List your property</h1>
+
+<% if @vehicle.errors.any? %>
+  <ul>
+  <% @vehicle.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+  <% end %>
+  </ul>
+<% end %> 
+
+ <form action="/host/vehicles/" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  
+  <label for="title">Title:
+  <input type="text" name="vehicle[title]" value="<%= @vehicle.title %>">
+  </label>
+  <label for="description">Description:
+  <input type="text" name="vehicle[description]" value="<%= @vehicle.description %>">
+  </label>
+  <label for="maker">Company:
+  <input type="text" name="vehicle[maker]" value="<%= @vehicle.maker %>">
+  </label>
+  <div data-controller="address" data-action="map-loaded@window->address#initGoogle" >
+  <label for="address">Address: 
+  <input type="text" id="address" data-address-target="input" autocomplete="off">
+  </label>
+  <label for="city">City:
+  <input type="text" name="vehicle[city]" value="<%= @vehicle.city %>">
+  </label>
+
+
+  <input type="submit" value="Create the wheel">
+ </form>

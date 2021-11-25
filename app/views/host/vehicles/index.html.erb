@@ -1,0 +1,8 @@
+<h1>Host::Vehicles#index</h1>
+<p>Find me in app/views/host/vehicles/index.html.erb</p>
+
+<% @vehicles.each do |l| %>
+  <%= link_to l.title, host_vehicle_path(l) %>
+  <%= l.status %>
+  <%= button_to "Delete", host_vehicle_path(l), method: :delete %>
+<% end %>

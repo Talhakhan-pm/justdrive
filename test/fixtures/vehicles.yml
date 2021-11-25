@@ -1,0 +1,36 @@
+# == Schema Information
+#
+# Table name: vehicles
+#
+#  id          :integer          not null, primary key
+#  host_id     :integer          not null
+#  title       :string           not null
+#  description :string
+#  maker       :string
+#  type        :string
+#  address     :string
+#  city        :string
+#  lat         :decimal(10, 6)
+#  lng         :decimal(10, 6)
+#  status      :decimal(, )
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#
+
+one:
+  host: one
+  title: MyString
+  description: MyString
+  address: MyString
+  city: MyString
+  lat: MyString
+  lng: MyString
+
+two:
+  host: two
+  title: MyString
+  description: MyString
+  address: MyString
+  city: MyString
+  lat: MyString
+  lng: MyString

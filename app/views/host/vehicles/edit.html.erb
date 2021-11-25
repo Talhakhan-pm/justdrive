@@ -1,0 +1,26 @@
+<h1>Host::Vehicles#update</h1>
+<p>Find me in app/views/host/vehicles/update.html.erb</p>
+
+<form action="<%= host_vehicle_path(@vehicle)%>" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input type="hidden" name="_method" value="PUT">
+
+  <label for="title">Title:
+  <input type="text" name="vehicle[title]" value="<%= @vehicle.title %>">
+  </label>
+  <label for="description">Description:
+  <input type="text" name="vehicle[description]" value="<%= @vehicle.description %>">
+  </label>
+  <label for="maker">Company:
+  <input type="text" name="vehicle[maker]" value="<%= @vehicle.maker %>">
+  </label>
+  <label for="address">Address: 
+  <input type="text" name="vehicle[address]" value="<%= @vehicle.address %>">
+  </label>
+  <label for="city">City:
+  <input type="text" name="vehicle[city]" value="<%= @vehicle.city %>">
+  </label>
+
+
+  <input type="submit" value="Create the wheel">
+ </form>
